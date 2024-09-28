@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    max-width: 100%;
+    min-width: 280px;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    padding: 10px 15px;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f5f5f5;
+}
+
+button:active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Special button styles */
+button:nth-child(4n) {
+    background-color: #ffcc00;
+}
+
+#clear, #backspace, #equals {
+    background-color: #ff6666;
+}
+
+/* Hover effects for special buttons */
+button:nth-child(4n):hover {
+    background-color: #ffbb33;
+}
+
+#clear:hover, #backspace:hover, #equals:hover {
+    background-color: #ff4444;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #display {
+        font-size: 20px;
+        height: 35px;
+    }
+
+    button {
+        height: 35px;
+        font-size: 16px;
+    }
+}
